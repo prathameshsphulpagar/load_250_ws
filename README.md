@@ -24,7 +24,7 @@ ros2 launch load_250_bringup load_250.launch.py
   
 3) In third terminal launch = For launching the recoreded jeson points and move robot accordingly.
    ```
-   ros2 launch load_250_bringup write_load_250_slam.launch.py
+   ros2 launch load_250_bringup write_load_250.launch.py
    ```
    This will launch the following things
    1. waypoint_from_json.cpp code present in /src/load_250_bringup/src/cpp
