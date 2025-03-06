@@ -30,9 +30,7 @@ ros2 launch load_250_bringup load_250.launch.py
    1. waypoint_from_json.cpp code present in /src/load_250_bringup/src/cpp
 
 # **3. Media Links**
-1) Screen recording =
-2) Screenshots =
-3) mobail recording =
+1) Screen recording = https://drive.google.com/file/d/1CFYwib6WBKwfnnIejkUfJMj87U3GKMfE/view?usp=drive_link
    
 # **4. Discriptions**
 1) **marker_read.cpp =**
