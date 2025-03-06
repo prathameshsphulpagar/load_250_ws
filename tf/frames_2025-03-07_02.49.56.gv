@@ -1,0 +1,19 @@
+digraph G {
+"load_250_v33" -> "load_250_v33/main_body_1"[label=" Broadcaster: default_authority\nAverage rate: 1000.949\nBuffer length: 1.054\nMost recent transform: 1.183\nOldest transform: 0.129\n"];
+"load_250_v33/odom" -> "load_250_v33"[label=" Broadcaster: default_authority\nAverage rate: 50.962\nBuffer length: 1.04\nMost recent transform: 1.18\nOldest transform: 0.14\n"];
+"load_250_v33" -> "load_250_v33/rwheel_1"[label=" Broadcaster: default_authority\nAverage rate: 1000.949\nBuffer length: 1.054\nMost recent transform: 1.183\nOldest transform: 0.129\n"];
+"load_250_v33" -> "load_250_v33/platform_1"[label=" Broadcaster: default_authority\nAverage rate: 1000.949\nBuffer length: 1.054\nMost recent transform: 1.183\nOldest transform: 0.129\n"];
+"load_250_v33" -> "load_250_v33/lwheel_1"[label=" Broadcaster: default_authority\nAverage rate: 1000.949\nBuffer length: 1.054\nMost recent transform: 1.183\nOldest transform: 0.129\n"];
+"map" -> "load_250_v33/odom"[label=" Broadcaster: default_authority\nAverage rate: 30.0\nBuffer length: 0.1\nMost recent transform: 1.3\nOldest transform: 1.2\n"];
+"load_250_v33" -> "load_250_v33/flidar_1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"load_250_v33" -> "load_250_v33/blidar_1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"load_250_v33" -> "load_250_v33/broller_1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"load_250_v33" -> "load_250_v33/imu_1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"load_250_v33" -> "load_250_v33/froller_1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"load_250_v33" -> "load_250_v33/camera_1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"load_250_v33" -> "load_250_v33/base_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1741295996.142161"[ shape=plaintext ] ;
+}->"map";
+}

@@ -1,0 +1,481 @@
+<?xml version="1.0" ?>
+<sdf version="1.11">
+  <model name="load_250_v33">
+  <!-- <pose relative_to=world>0 0 0 0 0 0</pose> -->
+    <link name="base_link">
+      <inertial>
+        <mass>0.0001</mass>
+        <inertia>
+          <ixx>1e-09</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1e-09</iyy>
+          <iyz>0</iyz>
+          <izz>1e-09</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <link name="froller_1">
+      <pose relative_to="__model__">-0.20000000558793546 -0.1750000026077032 -0.05 0.0 -0.0 0.0</pose>
+      <inertial>
+        <pose>0.37500000558793545 0.1750000026077032 0.020000000000000004 0.0 -0.0 0.0</pose>
+        <mass>0.2630560248605853</mass>
+        <inertia>
+          <ixx>4.208896397769348e-05</ixx>
+          <ixy>-2.842170943040401e-18</ixy>
+          <ixz>0.0</ixz>
+          <iyy>4.208896397768676e-05</iyy>
+          <iyz>1.7763568394002505e-19</iyz>
+          <izz>4.208896397768849e-05</izz>
+        </inertia>
+      </inertial>
+      <visual name="froller_1__froller_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/froller_1/froller_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="froller_1__froller_collision">
+        <pose relative_to="__model__">0.175 0.0 -0.03 -0.0 -1.5707963267948966 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.02</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <torsional>
+              <coefficient>0.0</coefficient>
+            </torsional>
+            <ode>
+              <mu>0.0</mu>
+              <mu2>0.0</mu2>
+            </ode>
+            <bullet>
+              <friction>0.0</friction>
+              <friction2>0.0</friction2>
+              <rolling_friction>0.0</rolling_friction>
+            </bullet>
+          </friction>
+        </surface>
+      </collision>
+    </link>
+    <link name="broller_1">
+      <pose relative_to="__model__">-0.2 -0.175 -0.05 0.0 -0.0 0.0</pose>
+      <inertial>
+        <pose>0.025000000000000022 0.17500000000000002 0.020000000000000004 0.0 -0.0 0.0</pose>
+        <mass>0.2630560248605853</mass>
+        <inertia>
+          <ixx>4.208896397769061e-05</ixx>
+          <ixy>1.4087204822734997e-19</ixy>
+          <ixz>-2.168404344971009e-19</ixz>
+          <iyy>4.208896397769543e-05</iyy>
+          <iyz>7.490254653612431e-20</iyz>
+          <izz>4.208896397769023e-05</izz>
+        </inertia>
+      </inertial>
+      <visual name="broller_1__broller_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/broller_1/broller_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="broller_1__broller_collision">
+        <pose relative_to="__model__">-0.175 0.0 -0.03 -0.0 -1.5707963267948966 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.02</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <torsional>
+              <coefficient>0.0</coefficient>
+            </torsional>
+            <ode>
+              <mu>0.0</mu>
+              <mu2>0.0</mu2>
+            </ode>
+            <bullet>
+              <friction>0.0</friction>
+              <friction2>0.0</friction2>
+              <rolling_friction>0.0</rolling_friction>
+            </bullet>
+          </friction>
+        </surface>
+      </collision>
+    </link>
+    <link name="imu_1">
+      <pose relative_to="__model__">-0.2 0.175 0.12 3.141592653589793 -0.0 0.0</pose>
+      <inertial>
+        <pose>0.2 0.17499999999999996 0.08500000000000002 -3.141592653589793 -0.0 0.0</pose>
+        <mass>0.2355</mass>
+        <inertia>
+          <ixx>2.5512500000000003e-05</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>5.69124999999993e-05</iyy>
+          <iyz>0.0</iyz>
+          <izz>6.672499999999956e-05</izz>
+        </inertia>
+      </inertial>
+      <visual name="imu_1__imu_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/imu_1/imu_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="imu_1__imu_collision">
+        <pose relative_to="__model__">0.0 0.0 0.035 -0.0 -1.5707963267948966 0</pose>
+        <geometry>
+          <box>
+            <size>0.02 0.03 0.05</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+    <link name="platform_1">
+      <pose relative_to="__model__">-0.2 -0.175 -0.05 0.0 -0.0 6.123233995736766e-17</pose>
+      <inertial>
+        <pose>0.20000000001825624 0.175 0.14461897647064387 0.0 -0.0 -6.123233995736766e-17</pose>
+        <mass>4.533219999999998</mass>
+        <inertia>
+          <ixx>0.02476554880152236</ixx>
+          <ixy>1.684420567471534e-11</ixy>
+          <ixz>-5.238766976312822e-12</ixz>
+          <iyy>0.05554422130152216</iyy>
+          <iyz>1.448607690690551e-10</iyz>
+          <izz>0.06986293283333335</izz>
+        </inertia>
+      </inertial>
+      <visual name="platform_1__platform_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/platform_1/platform_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="platform_1__platform_collision">
+        <pose relative_to="__model__">0.0 1.7763568394002505e-17 0.08850000629013424 -0.0 -1.5707963267948966 0</pose>
+        <geometry>
+          <box>
+            <size>0.06700001258026848 0.21000000000000005 0.360000025160537</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+    <link name="camera_1">
+      <pose relative_to="__model__">-0.2 0.175 0.16399999999999998 3.141592653589793 -0.0 0.0</pose>
+      <inertial>
+        <pose>0.395 0.17499999999999996 0.10950000000000001 -3.141592653589793 -0.0 0.0</pose>
+        <mass>0.019624999999999997</mass>
+        <inertia>
+          <ixx>4.1294270833334005e-06</ixx>
+          <ixy>1.7763568394002505e-19</ixy>
+          <ixz>2.981555974335137e-19</ixz>
+          <iyy>2.044270833332848e-07</iyy>
+          <iyz>-4.4408920985006264e-20</iyz>
+          <izz>4.2520833333339935e-06</izz>
+        </inertia>
+      </inertial>
+      <visual name="camera_1__camera_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/camera_1/camera_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="camera_1__camera_collision">
+        <pose relative_to="__model__">0.195 0.0 0.05449999999999999 -0.0 -1.5707963267948966 0</pose>
+        <geometry>
+          <box>
+            <size>0.005 0.05 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+    <link name="flidar_1">
+      <pose relative_to="__model__">-0.2 0.025 0.184 3.141592653589793 -0.0 0.0</pose>
+      <inertial>
+        <pose>0.35 0.09999999999999998 0.11699999999999999 -3.141592653589793 -0.0 0.0</pose>
+        <mass>0.1541343895667491</mass>
+        <inertia>
+          <ixx>2.5367951616194146e-05</ixx>
+          <ixy>1.3010426069826053e-18</ixy>
+          <ixz>1.0842021724855044e-18</ixz>
+          <iyy>2.5367951616192194e-05</iyy>
+          <iyz>-7.589415207398531e-19</iyz>
+          <izz>4.816699673960891e-05</izz>
+        </inertia>
+      </inertial>
+      <visual name="flidar_1__flidar_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/flidar_1/flidar_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="flidar_1__flidar_collision">
+        <pose relative_to="__model__">0.15 -0.075 0.06699999999999999 -0.0 -1.5707963267948966 0</pose>
+        <geometry>
+          <box>
+            <size>0.01 0.05 0.05</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+    <link name="blidar_1">
+      <pose relative_to="__model__">-0.2 0.325 0.184 3.141592653589793 -0.0 0.0</pose>
+      <inertial>
+        <pose>0.05000000000000002 0.25 0.11700000000000002 -3.141592653589793 -0.0 0.0</pose>
+        <mass>0.15413438956674944</mass>
+        <inertia>
+          <ixx>2.536795161619588e-05</ixx>
+          <ixy>0.0</ixy>
+          <ixz>-2.168404344971009e-19</ixz>
+          <iyy>2.536795161619393e-05</iyy>
+          <iyz>5.421010862427522e-19</iyz>
+          <izz>4.816699673961238e-05</izz>
+        </inertia>
+      </inertial>
+      <visual name="blidar_1__blidar_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/blidar_1/blidar_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="blidar_1__blidar_collision">
+        <pose relative_to="__model__">-0.15 0.075 0.06699999999999999 -0.0 -1.5707963267948966 0</pose>
+        <geometry>
+          <box>
+            <size>0.01 0.05 0.05000000000000002</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+    <link name="lwheel_1">
+      <pose relative_to="__model__">0.0 -0.345 0.0 3.141592653589793 -0.0 0.0</pose>
+      <inertial>
+        <pose>-3.8721528701299523e-07 -0.1900002387848987 -5.898795481194228e-06 -3.141592653589793 -0.0 0.0</pose>
+        <mass>1.0452977986041458</mass>
+        <inertia>
+          <ixx>0.0011276214981046882</ixx>
+          <ixy>3.9380700842175555e-10</ixy>
+          <ixz>-6.493558752609229e-08</ixz>
+          <iyy>0.001915839348354125</iyy>
+          <iyz>-5.2607249342789435e-09</iyz>
+          <izz>0.0011276094071435427</izz>
+        </inertia>
+      </inertial>
+      <visual name="lwheel_1__lwheel_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/lwheel_1/lwheel_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="lwheel_1__lwheel_collision">
+        <pose relative_to="__model__">0.0 -0.155 0.0 -0.0 -1.5707963267948966 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.05</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <torsional>
+              <coefficient>0.0</coefficient>
+            </torsional>
+            <ode>
+              <mu>0.8</mu>
+              <mu2>0.8</mu2>
+            </ode>
+            <bullet>
+              <friction>0.8</friction>
+              <friction2>0.8</friction2>
+              <rolling_friction>0.01</rolling_friction>
+            </bullet>
+          </friction>
+        </surface>
+      </collision>
+    </link>
+    <link name="rwheel_1">
+      <pose relative_to="__model__">0.0 0.265 0.0 3.141592653589793 -0.0 0.0</pose>
+      <inertial>
+        <pose>-3.872152870215363e-07 0.10999976121510144 -5.8987954810038635e-06 -3.141592653589793 -0.0 0.0</pose>
+        <mass>1.0452977986041367</mass>
+        <inertia>
+          <ixx>0.0011276214981046952</ixx>
+          <ixy>3.938070079755942e-10</ixy>
+          <ixz>-6.493558752823415e-08</ixz>
+          <iyy>0.0019158393483540961</iyy>
+          <iyz>-5.260724932138385e-09</iyz>
+          <izz>0.0011276094071435323</izz>
+        </inertia>
+      </inertial>
+      <visual name="rwheel_1__rwheel_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/rwheel_1/rwheel_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="rwheel_1__rwheel_collision">
+        <pose relative_to="__model__">0.0 0.155 0.0 -0.0 -1.5707963267948966 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.05</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <torsional>
+              <coefficient>0.0</coefficient>
+            </torsional>
+            <ode>
+              <mu>0.8</mu>
+              <mu2>0.8</mu2>
+            </ode>
+            <bullet>
+              <friction>0.8</friction>
+              <friction2>0.8</friction2>
+              <rolling_friction>0.01</rolling_friction>
+            </bullet>
+          </friction>
+        </surface>
+      </collision>
+    </link>
+    <link name="body_1">
+      <inertial>
+        <pose>1.446053010825452e-05 1.2287790206724232e-16 0.03247046284094435 0.0 -0.0 0.0</pose>
+        <mass>46.4821308880129</mass>
+        <inertia>
+          <ixx>0.2582819743458066</ixx>
+          <ixy>0.004161628518543688</ixy>
+          <ixz>-1.2025447264138033e-05</ixz>
+          <iyy>0.6234668092851965</iyy>
+          <iyz>3.6823121867303636e-16</iyz>
+          <izz>0.8201449501044838</izz>
+        </inertia>
+      </inertial>
+      <visual name="body_1__base_link_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/body_1/base_link_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="body_1__base_link_collision">
+        <pose relative_to="__model__">0.0 0.0 0.0425 -0.0 -1.5707963267948966 0</pose>
+        <geometry>
+          <box>
+            <size>0.145 0.3 0.4</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+
+    
+    <joint name="revolute_23" type="revolute">
+      <pose relative_to="__model__">0.0 -0.15 0.0 0.0 -0.0 0.0</pose>
+      <parent>body_1</parent>
+      <child>lwheel_1</child>
+      <axis>
+        <xyz expressed_in="__model__">0.0 1.0 -0.0</xyz>
+      </axis>
+    </joint>
+    <joint name="revolute_24" type="revolute">
+      <pose relative_to="__model__">0.0 0.15 0.0 0.0 -0.0 0.0</pose>
+      <parent>body_1</parent>
+      <child>rwheel_1</child>
+      <axis>
+        <xyz expressed_in="__model__">0.0 1.0 -0.0</xyz>
+      </axis>
+    </joint>
+    <joint name="rigid_25" type="fixed">
+      <pose relative_to="__model__">0.15 -0.075 0.06199999999999999 0.0 -0.0 0.0</pose>
+      <parent>body_1</parent>
+      <child>flidar_1</child>
+      <axis/>
+    </joint>
+    <joint name="rigid_26" type="fixed">
+      <pose relative_to="__model__">0.195 0.0 0.05199999999999999 0.0 -0.0 0.0</pose>
+      <parent>body_1</parent>
+      <child>camera_1</child>
+      <axis/>
+    </joint>
+    <joint name="rigid_27" type="fixed">
+      <pose relative_to="__model__">-0.15 0.075 0.06199999999999999 0.0 -0.0 0.0</pose>
+      <parent>body_1</parent>
+      <child>blidar_1</child>
+      <axis/>
+    </joint>
+    <joint name="rigid_28" type="fixed">
+      <pose relative_to="__model__">0.0 0.0 0.025 0.0 -0.0 0.0</pose>
+      <parent>body_1</parent>
+      <child>imu_1</child>
+      <axis/>
+    </joint>
+    <joint name="slider_31" type="prismatic">
+      <pose relative_to="__model__">0.0 0.0 0.055 0.0 -0.0 0.0</pose>
+      <parent>body_1</parent>
+      <child>platform_1</child>
+      <axis>
+        <xyz expressed_in="__model__">0.0 0.0 1.0</xyz>
+        <limit>
+          <lower>0.0</lower>
+          <upper>0.055</upper>
+        </limit>
+      </axis>
+    </joint>
+    <joint name="rigid_33" type="fixed">
+      <pose relative_to="__model__">0.175 0.0 -0.03 0.0 -0.0 0.0</pose>
+      <parent>body_1</parent>
+      <child>froller_1</child>
+      <axis/>
+    </joint>
+    <joint name="rigid_34" type="fixed">
+      <pose relative_to="__model__">-0.175 0.0 -0.03 0.0 -0.0 0.0</pose>
+      <parent>body_1</parent>
+      <child>broller_1</child>
+      <axis/>
+    </joint>
+    <joint name="base_link_joint" type="fixed">
+      <parent>base_link</parent>
+      <child>body_1</child>
+      <axis/>
+    </joint>
+
+    <plugin
+      filename="ignition-gazebo-diff-drive-system"
+      name="ignition::gazebo::systems::DiffDrive">
+      <left_joint>revolute_24</left_joint>
+      <right_joint>revolute_23</right_joint>
+      <wheel_separation>0.3</wheel_separation>
+      <wheel_radius>0.05</wheel_radius>
+      <odom_publish_frequency>30</odom_publish_frequency>
+      <max_linear_acceleration>2</max_linear_acceleration>
+      <min_linear_acceleration>-1</min_linear_acceleration>
+      <max_angular_acceleration>4</max_angular_acceleration>
+      <min_angular_acceleration>-4</min_angular_acceleration>
+      <max_linear_velocity>2.0</max_linear_velocity>
+      <min_linear_velocity>-0.1</min_linear_velocity>
+      <max_angular_velocity>3</max_angular_velocity>
+      <min_angular_velocity>-1</min_angular_velocity>
+    </plugin>
+  </model>
+</sdf>
